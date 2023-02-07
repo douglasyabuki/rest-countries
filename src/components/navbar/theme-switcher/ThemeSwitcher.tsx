@@ -18,7 +18,7 @@ export default function ThemeSwitcher ({theme, changeTheme}: Props) {
   // Returns the button to switch theme between dark and light to Navbar.tsx
   return (
     <div className="flex items-center justify-center" role={"button"} onClick={changeTheme}>
-      <FontAwesomeIcon icon={currentIcon}></FontAwesomeIcon>
+      <FontAwesomeIcon icon={currentIcon} className={"mr-2"}></FontAwesomeIcon>
       <h2>{currentContent}</h2>
     </div>
   );
