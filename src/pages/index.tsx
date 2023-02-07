@@ -7,10 +7,13 @@ import Navbar from '@/components/navbar/Navbar';
 // Hooks
 import { useState, useEffect } from 'react'
 
-
+// Home main function
 export default function Home() {
+
+  // Setting state to theme
   const [theme, setTheme] = useState("light");
 
+  // Add/Remove dark class whenever the theme is changed
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -19,10 +22,12 @@ export default function Home() {
     }
   }, [theme])
 
+  // Switches theme based on current state and click
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  // Returns the app itself
   return (
     <>
       <Head>
