@@ -2,7 +2,7 @@
 import Head from 'next/head'
 
 // Components
-import ThemeSwitcher from '@/components/theme-switcher/ThemeSwitcher';
+import Navbar from '@/components/navbar/Navbar';
 
 // Hooks
 import { useState, useEffect } from 'react'
@@ -31,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen min-w-screen darkMode">
-
+        <Navbar theme={theme} changeTheme={handleThemeSwitch}></Navbar>
       </main>
     </>
   )
