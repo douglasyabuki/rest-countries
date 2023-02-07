@@ -7,6 +7,7 @@ import Navbar from '@/components/navbar/Navbar';
 // Hooks
 import { useState, useEffect } from 'react'
 
+
 export default function Home() {
   const [theme, setTheme] = useState("light");
 
@@ -32,6 +33,7 @@ export default function Home() {
       </Head>
       <main className="min-h-screen min-w-screen darkMode">
         <Navbar theme={theme} changeTheme={handleThemeSwitch}></Navbar>
+
       </main>
     </>
   )
