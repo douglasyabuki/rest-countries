@@ -33,7 +33,6 @@ export default function Home() {
       </Head>
       <main className="min-h-screen min-w-screen darkMode">
         <Navbar theme={theme} changeTheme={handleThemeSwitch}></Navbar>
-
       </main>
     </>
   )

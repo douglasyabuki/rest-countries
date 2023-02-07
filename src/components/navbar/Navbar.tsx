@@ -8,7 +8,7 @@ interface Props {
 
 export default function Navbar({ theme, changeTheme }: Props) {
   return (
-    <div className="flex w-screen h-16 bg-slate-500 dark:bg-black justify-between items-center">
+    <div className="flex w-screen h-16 bg-light-mode-background text-light-mode-text dark:bg-dark-mode-background dark:text-dark-mode-text justify-between items-center">
       <div>
         <h1>Where in the world</h1>
       </div>
