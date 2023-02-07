@@ -19,7 +19,7 @@ module.exports = {
       'light-mode-background':'hsl(0, 0%, 98%)',
       'light-mode-text':'hsl(200, 15%, 8%)',
       'translucid-black': '#0000005e',
-      'transparent-black': ' #19181F80',
+      'transparent-black': ' #19181F20',
     },
     extend: {},
   },
