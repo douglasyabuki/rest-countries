@@ -8,5 +8,5 @@
 // }
 
 export default function Details({}){
-    return <></>
+    return <>hello</>
 }

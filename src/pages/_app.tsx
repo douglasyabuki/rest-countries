@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import Layout from '@/components/navbar/layout/Layout';
+import Layout from '@/components/layout/Layout';
 import type { AppProps } from 'next/app'
 import { Nunito_Sans } from '@next/font/google'
 import "@fortawesome/fontawesome-svg-core/styles.css";
