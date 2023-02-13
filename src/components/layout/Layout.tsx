@@ -40,7 +40,7 @@ export default function Layout({ children }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar theme={theme} changeTheme={handleThemeSwitch}></Navbar>
-      <main className="min-h-screen min-w-screen darkMode dark:bg-dark-mode-background dark:text-dark-mode-text transition-all duration-300">{children}</main>
+      <main className="min-h-screen min-w-screen p-6 darkMode dark:bg-dark-mode-background dark:text-dark-mode-text transition-all duration-300">{children}</main>
     </>
   );
 }
