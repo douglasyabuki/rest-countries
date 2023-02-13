@@ -8,7 +8,7 @@ export interface ICountry {
     flags: ICountryFlag;
     name: ICountryName;
     tld: string[];
-    currencies: PaymentCurrencyAmount;
+    currencies: ICountryCurrency;
     capital: string[];
     altSpellings: string[];
     languages:{
