@@ -1,12 +1,12 @@
-export async function getStaticProps() {
-    const data = await fetch('')
-    const details = await data.json()
+// export async function getStaticProps() {
+//     const data = await fetch('')
+//     const details = await data.json()
 
-    return{
-        props: {details},
-    }
-}
-
-// export default function Details({details}){
-//     return <></>
+//     return{
+//         props: {details},
+//     }
 // }
+
+export default function Details({}){
+    return <></>
+}
