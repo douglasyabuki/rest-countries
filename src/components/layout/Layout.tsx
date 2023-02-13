@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 
 // Components
-import Navbar from "../Navbar";
+import Navbar from "../navbar/Navbar";
 
 // Native components
 import Head from "next/head";
@@ -40,7 +40,7 @@ export default function Layout({ children }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar theme={theme} changeTheme={handleThemeSwitch}></Navbar>
-      <main>{children}</main>
+      <main className="min-h-screen min-w-screen darkMode dark:bg-dark-mode-background dark:text-dark-mode-text transition-all duration-300">{children}</main>
     </>
   );
 }
