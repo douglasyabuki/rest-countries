@@ -7,7 +7,7 @@ const fetchData = async() => {
     return json;
 }
 
-export async function getCountries(): Promise<ICountry[]> {
+export async function fetchCountries(): Promise<ICountry[]> {
     let countries = await fetchData();
     return countries;
 }
