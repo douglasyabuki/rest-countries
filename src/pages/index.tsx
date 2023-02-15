@@ -21,6 +21,7 @@ export default function Home() {
   const loadCountryList = async () => {
     let list = await fetchCountries();
     setCountryList(list);
+    setIsLoading(false);
     console.log(countryList);
   };
 
@@ -32,8 +33,8 @@ export default function Home() {
   return (
     <div className="">
       <FilterableBar></FilterableBar>
-      <div className={`flex-wrap`}>
-        {countryList !== null ? (
+      <div className={`flex flex-wrap justify-between gap-6`}>
+        {countryList !== null && isLoading === false ? (
           countryList.map((item, id) => (
             <CountryCard key={id} country={item}></CountryCard>
           ))
