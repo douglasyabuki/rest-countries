@@ -20,7 +20,7 @@ export default function handler(
   res: NextApiResponse<Data | ListData>
 ) {
   if (req.method === 'GET') {
-    res.status(200).json({ name: 'LALALAL' })
+    res.status(200).json({allInfo})
   } else {
     res.status(405).end(`Method ${req.method} Not Allowed`)
   }
