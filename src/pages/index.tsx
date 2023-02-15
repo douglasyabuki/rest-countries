@@ -1,8 +1,12 @@
+// Components
+import CountryCard from "@/components/countries/country-card/CountryCard";
+import LoadingAnimation from "@/components/countries/loading-animation/LoadingAnimation";
+
 // Interfaces
 import { ICountry } from "@/interfaces/ICountry";
 
 // Hooks
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Utils
 import { fetchCountries } from "@/utils/fetchCountries";
@@ -19,15 +23,12 @@ export default function Home() {
     console.log(countryList)
   }
 
+  // Triggers load on app start
   useEffect(() => {
     loadCountryList();
   },[])
 
   return (
-    <>
-      <main className="min-h-screen min-w-screen darkMode">
-        <h1>hello</h1>
-      </main>
-    </>
+    <></>
   )
 }
