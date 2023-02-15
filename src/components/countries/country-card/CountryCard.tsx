@@ -15,7 +15,7 @@ interface Props {
 
 export default function CountryCard({ country }: Props) {
   return (
-    <Link href={`/details/${country.tld}`} className="block w-auto h-auto rounded-xl">
+    <Link href={`/details/${country.tld}`} className="flex-col w-auto h-auto rounded-xl">
       <CardFlag flag={country.flags}></CardFlag>
       <CardInfo></CardInfo>
     </Link>)
