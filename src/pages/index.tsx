@@ -30,6 +30,7 @@ export default function Home() {
     loadCountryList();
   }, []);
 
+  // This is the Home page. It renders country cards based on data fetched from api/countries.ts
   return (
     <div className="">
       <FilterableBar></FilterableBar>
