@@ -3,13 +3,13 @@ import { ICountry } from "@/interfaces/ICountry";
 
 // Props destructuring
 interface Props {
-    country: ICountry
+  country: ICountry;
 }
 
-export default function CountryCard ({country}:Props) {
+export default function CountryCard({ country }: Props) {
   return (
-    <div>
-      
-    </div>
-  );
-}
+    <div className="block w-min">
+      <div></div>
+      <div></div>
+    </div>)
+};
