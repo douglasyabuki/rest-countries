@@ -29,6 +29,10 @@ export default function Home() {
   },[])
 
   return (
-    <></>
+    <div className={`flex-wrap`}>
+      {countryList !== null ? countryList.map((item, id) => (
+        <CountryCard key={id} country={item}></CountryCard>
+      )) : <LoadingAnimation></LoadingAnimation>}
+    </div>
   )
 }
