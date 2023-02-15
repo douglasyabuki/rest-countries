@@ -19,4 +19,6 @@ export interface ICountry {
         googleMaps: string;
         openStreetMaps: string;
     };
+    region: string;
+    population: number;
 }
