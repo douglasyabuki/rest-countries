@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="">
       <FilterableBar></FilterableBar>
-      <div className={`flex flex-wrap justify-between gap-6`}>
+      <div className={`flex flex-wrap justify-evenly gap-20`}>
         {countryList !== null && isLoading === false ? (
           countryList.map((item, id) => (
             <CountryCard key={id} country={item}></CountryCard>

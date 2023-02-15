@@ -13,10 +13,21 @@ interface Props {
   country: ICountry;
 }
 
+// Country card main function
 export default function CountryCard({ country }: Props) {
+  // Returns a single country card to be rendered by pages/index.tsx
   return (
-    <Link href={`/details/${country.tld}`} className="flex-col w-auto rounded-xl bg-light-mode-element dark:bg-dark-mode-element h-[400px] scale-100 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg shadow-transparent-black hover:shadow-xl hover:shadow-transparent-black">
+    <Link
+      href={`/details/${country.tld}`}
+      className="flex-col w-auto rounded-xl bg-light-mode-element dark:bg-dark-mode-element h-[400px] scale-100 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg shadow-transparent-black hover:shadow-xl hover:shadow-transparent-black"
+    >
       <CardFlag flag={country.flags}></CardFlag>
-      <CardInfo countryName={country.name} countryPopulation={country.population} countryRegion={country.region} countryCapital={country.capital}></CardInfo>
-    </Link>)
-};
+      <CardInfo
+        countryName={country.name}
+        countryPopulation={country.population}
+        countryRegion={country.region}
+        countryCapital={country.capital}
+      ></CardInfo>
+    </Link>
+  );
+}
