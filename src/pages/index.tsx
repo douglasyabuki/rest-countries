@@ -1,7 +1,6 @@
 // Components
-import CountryCard from "@/components/countries/country-card/CountryCard";
-import FilterableBar from "@/components/countries/filterable-bar/FilterableBar";
-import LoadingAnimation from "@/components/countries/loading-animation/LoadingAnimation";
+import Countries from "@/components/filterable-countries/FilterableCountries";
+import LoadingAnimation from "@/components/common/loading-animation/LoadingAnimation";
 
 // Interfaces
 import { ICountry } from "@/interfaces/ICountry";
@@ -30,19 +29,14 @@ export default function Home() {
     loadCountryList();
   }, []);
 
-  // This is the Home page. It renders country cards based on data fetched from api/countries.ts
+  // This is the Home page. It passes the fetched data through props to Countries.tsx
   return (
     <div className="">
-      <FilterableBar></FilterableBar>
-      <div className={`flex flex-wrap justify-evenly gap-20`}>
         {countryList !== null && isLoading === false ? (
-          countryList.map((item, id) => (
-            <CountryCard key={id} country={item}></CountryCard>
-          ))
+          <Countries countryList={countryList}></Countries>
         ) : (
           <LoadingAnimation></LoadingAnimation>
         )}
-      </div>
     </div>
   );
 }
