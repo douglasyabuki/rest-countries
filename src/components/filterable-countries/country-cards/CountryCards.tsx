@@ -12,7 +12,7 @@ export interface ICountryCardsProps {
 }
 
 // Country Cards main function
-export default function CountryCards ({countryList}: ICountryCardsProps) {
+export default function CountryCards ({countryList, filterText, filterRegion}: ICountryCardsProps) {
   return (
     <div className={`flex flex-wrap justify-evenly gap-20`}>
     {

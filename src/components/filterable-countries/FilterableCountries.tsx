@@ -21,7 +21,7 @@ export default function FilterableCountries({countryList}: Props) {
   // Returns the country cards with the search engine and filter by region to pages/index.tsx
   return (
     <div>
-      <FilterableBar filterText={filterText} filterRegion={filterRegion}></FilterableBar>
+      <FilterableBar filterText={filterText} setFilterText={setFilterText} filterRegion={filterRegion} setFilterRegion={setFilterRegion}></FilterableBar>
       <CountryCards countryList={countryList} filterText={filterText} filterRegion={filterRegion}></CountryCards>
     </div>
   );
