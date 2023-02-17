@@ -25,7 +25,7 @@ export default function CardInfo ({countryName, countryPopulation, countryRegion
   // Returns basic info about the country to CountryCard.tsx
   return (
     <div className="p-6 flex-col max-w-[300px] items-center justify-center">
-      <h2 className="text-xl mb-2">{countryName.official}</h2>
+      <h2 className="text-lg mb-2">{countryName.official}</h2>
       {infoFieldList.map((item) => (
         <CardInfoField key={item.id} fieldTitle={item.title} fieldContent={item.content}></CardInfoField>
       ))}
