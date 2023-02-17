@@ -11,7 +11,7 @@ interface Props {
 
 export default function FilterableBar ({filterText, setFilterText, filterRegion, setFilterRegion}: Props) {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mb-6">
       <SearchBar filterText={filterText} setFilterText={setFilterText}></SearchBar>
       <RegionFilter filterRegion={filterRegion} setFilterRegion={setFilterRegion}></RegionFilter>
     </div>

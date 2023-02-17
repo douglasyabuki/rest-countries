@@ -1,20 +1,23 @@
+// Const
+import { regionList } from "./region-list/region-list";
+
 // Props destructuring
 interface Props {
   filterRegion: any;
   setFilterRegion: any;
 }
 
-export default function RegionFilter ({filterRegion, setFilterRegion}: Props) {
+export default function RegionFilter({ filterRegion, setFilterRegion }: Props) {
   return (
-    <div>
-      <select className="">
-        <option value="">Filter by Region</option>
-        <option value="Africa">Africa</option>
-        <option value="America">America</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="Oceania">Oceania</option>
-      </select>
-    </div>
+    <select className="p-6 bg-light-mode-element text-light-mode-text dark:bg-dark-mode-element dark:text-dark-mode-text transition-all duration-300 rounded-lg">
+      <option value="" disabled selected hidden>
+        Filter by Region
+      </option>
+      {regionList.map((item) => (
+        <option key={item.id} value={item.value}>
+          {item.content}
+        </option>
+      ))}
+    </select>
   );
 }
