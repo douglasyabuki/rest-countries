@@ -22,7 +22,7 @@ export default function RegionFilter({ filterRegion, setFilterRegion }: Props) {
       onChange={onChangeHandler}
       value={filterRegion}
     >
-      <option value="" disabled selected hidden>
+      <option value="" disabled hidden>
         Filter by Region
       </option>
       {regionList.map((item) => (

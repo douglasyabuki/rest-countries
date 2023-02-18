@@ -12,4 +12,5 @@ export const regionList:Region[] = [
     { id: 2, value: "Asia", content: "Asia" },
     { id: 3, value: "Europe", content: "Europe" },
     { id: 4, value: "Oceania", content: "Oceania" },
+    { id: 5, value: "", content: "All Regions" },
 ]
