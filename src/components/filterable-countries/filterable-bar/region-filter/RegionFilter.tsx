@@ -3,8 +3,8 @@ import { regionList } from "./region-list/region-list";
 
 // Props destructuring
 interface Props {
-  filterRegion: any;
-  setFilterRegion: any;
+  filterRegion: string;
+  setFilterRegion: (value: string) => void;
 }
 
 // Region Filter main function
