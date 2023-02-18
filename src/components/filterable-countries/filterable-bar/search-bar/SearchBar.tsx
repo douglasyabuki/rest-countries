@@ -13,7 +13,7 @@ interface Props {
 
 // Search bar main function
 export default function SearchBar({ filterText, setFilterText }: Props) {
-  
+
   // Function to change the state of filterText based on user input
   const onInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilterText(event.target.value);
@@ -21,16 +21,16 @@ export default function SearchBar({ filterText, setFilterText }: Props) {
 
   // Returns a functional searchbar to FilterableBar.tsx
   return (
-    <div className="relative flex items-center dark:bg-dark-mode-element dark:text-dark-mode-text transition-all duration-300 rounded-lg">
+    <div className="relative flex items-center dark:text-dark-mode-text transition-all duration-300 rounded-lg">
       <FontAwesomeIcon
         icon={faSearch}
-        className={"absolute text-xl translate-x-6"}
+        className={"absolute text-xl translate-x-3 md:translate-x-6"}
       ></FontAwesomeIcon>
       <input
         type={"text"}
         value={filterText}
         onInput={onInputHandler}
-        className="py-6 px-14 bg-light-mode-element text-light-mode-text dark:bg-dark-mode-element dark:text-dark-mode-text transition-all duration-300 rounded-lg"
+        className="py-6 px-10 md:px-14 bg-light-mode-element text-light-mode-text dark:bg-dark-mode-element dark:text-dark-mode-text transition-all duration-300 rounded-lg"
         placeholder="Search for a country .."
       ></input>
     </div>

@@ -18,7 +18,7 @@ export default function FilterableBar ({filterText, setFilterText, filterRegion,
 
   // Returns both filter components (text search and region search) to FilterableCountries.tsx
   return (
-    <div className="flex justify-between items-center mb-6">
+    <div className="block md:flex md:justify-between items-center mb-6 space-y-4">
       <SearchBar filterText={filterText} setFilterText={setFilterText}></SearchBar>
       <RegionFilter filterRegion={filterRegion} setFilterRegion={setFilterRegion}></RegionFilter>
     </div>
