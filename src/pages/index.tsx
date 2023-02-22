@@ -19,6 +19,7 @@ export default function Home() {
   // Function to fetch data from api/countries
   const loadCountryList = async () => {
     let list = await fetchCountries();
+    list.sort((a,b) => a.name.common.localeCompare(b.name.common));
     setCountryList(list);
     setIsLoading(false);
     console.log(countryList);
