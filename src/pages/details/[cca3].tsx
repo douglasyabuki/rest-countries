@@ -10,10 +10,11 @@ import { useRouter } from "next/router";
 // Props destructuring
 interface DetailsProps {
   countryList: ICountry[];
+  isLoading: boolean;
 }
 
 // Details main function
-export default function Details({ countryList }: DetailsProps) {
+export default function Details({ countryList, isLoading }: DetailsProps) {
 
   // This hook allows the current route and its properties. In this case, it is solely used to get the URL after /details/
   const router = useRouter()
