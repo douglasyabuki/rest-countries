@@ -1,22 +1,23 @@
 // Interfaces
 import { ICountry } from "@/interfaces/ICountry";
 
-// Native Components
-import { GetStaticPaths, GetStaticProps } from "next";
+// Native hooks
+import { useRouter } from "next/router";
 
 // Props destructuring
 interface DetailsProps {
-  countries: ICountry[];
+  countryList: ICountry[];
 }
 
-// export const getStaticProps: GetStaticProps = async (context) => {
-  
-// };
+export default function Details({ countryList }: DetailsProps) {
+  const router = useRouter()
+  const {cca3} = router.query
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-  
-// };
+  const detailedCountry: ICountry | undefined = countryList.find((country) => country.cca3 === cca3)
 
-export default function Details({ countries }: DetailsProps) {
-  return <>hello</>;
+  return (
+    <div>
+      {detailedCountry ? <h1>{detailedCountry.name.common}</h1> : <h1>Country not found</h1>}
+    </div>
+  );
 }
