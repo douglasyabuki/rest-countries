@@ -13,7 +13,7 @@ interface Props {
 // Detailed Info main function
 export default function DetailedInfo ({country}: Props) {
   return (
-    <div className="block md:flex justify-center items-center">
+    <div className="block md:flex md:justify-between justify-center items-center">
       <Flag flags={country.flags}></Flag>
       <Information country={country}></Information>
     </div>
